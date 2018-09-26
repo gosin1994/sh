@@ -1,0 +1,33 @@
+.totalDiv{
+ width: 100%;
+ height: 1100px;
+ background: linear-gradient(blueviolet,pink,burlywood);
+}
+.topImg{
+  display: flex;
+  justify-content: center;  
+  width: 100%;
+}
+/* 按钮样式 */
+.button1{
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* 底部两个咨询按钮样式 */
+.consult{
+  display: flex;
+  flex-direction: row;
+}
+.consult-phone{
+  width: 50%;
+  height: 40px;
+ 
+ 
+}
+.consult-service{
+  width: 50%;
+  height: 40px;
+  
+  
+}

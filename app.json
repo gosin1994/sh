@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/evaluation/evaluation",
+    "pages/member/member"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8B2CE2",
+    "navigationBarTitleText": "深圳积分入户公共服务平台",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#1AAD19",
+    "backgroundColor": "#F5F5F7",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/icon/index.png",
+        "selectedIconPath": "imgs/icon/index2.png"
+      },
+      {"pagePath":"pages/evaluation/evaluation",
+        "text": "测评",
+        "iconPath": "imgs/icon/evaluation.png",
+        "selectedIconPath": "imgs/icon/evaluation2.png"},
+      {"pagePath": "pages/member/member",
+        "text": "会员中心",
+        "iconPath": "imgs/icon/member.png",
+        "selectedIconPath": "imgs/icon/member2.png"}
+    ]
+  }
+}

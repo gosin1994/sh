@@ -1,0 +1,55 @@
+<!--index.wxml-->
+
+<view class="totalDiv">
+
+<view style='height:10px'></view>
+<!-- 首页顶部图片 -->
+<view class='topImg'>
+  <image src='/imgs/index.png' style='width:100%;height=100%' mode="widthFix"> 
+  </image>
+</view>
+
+<!-- 首页按钮 -->
+   <view style='height:20px'></view>
+
+<view class="button1" >
+    <button type='primary'>积分入户测评入口>></button>
+</view>
+
+  <view style='height:20px'></view>
+
+<view class="button1" >
+    <button type='primary'>免考学历提升入口>></button>
+</view>
+   <view style='height:20px'></view>
+
+<view class="button1" >
+    <button type='primary'>注册会员领奖励金>></button>
+</view>
+  <view style='height:20px'></view>
+
+<view class="button1" >
+    <button type='primary'>已是会员立即登录>></button>
+</view>
+  <view style='height:20px'></view>
+
+<!-- 底部补贴图片 -->
+<view class='topImg'>
+  <image src='/imgs/butie.jpg' style='width:90%;height=90%' mode="widthFix"> 
+  </image>
+</view>
+ <view style='height:10px'></view>
+<!-- ==底部电话客服 start== -->
+<view class='consult'>
+  <button type='primary' bindtap='calling'  class='consult-phone'>
+  拨打电话
+  </button>
+
+  <button type='primary' open-type='contact' class='consult-service'>
+  在线客服
+  </button>
+
+</view>
+<!-- ==底部电话客服 end== -->
+
+</view>

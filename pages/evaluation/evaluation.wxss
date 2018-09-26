@@ -1,0 +1,126 @@
+/* pages/evaluation.wxss */
+/* 测评页面总的样式 */
+.totalDiv{
+ width: 100%;
+ height: 1570px;
+ background: linear-gradient(blueviolet,pink,burlywood);
+}
+/* 顶部tab */
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #9033E1;  
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width: 50%;  
+    color: grey;  
+}  
+.on{ color: white;  
+    border-bottom: 1rpx solid #EDECE8;
+    }  
+  
+.swiper-box{ display: block; height: 97%; width: 100%; overflow: hidden; }  
+
+
+
+
+/* 顶部图片样式 */
+.topImg{
+  display: flex;
+  justify-content: center;  
+  width: 100%;
+}
+/* 标题样式 */
+.headline{
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-size: 25px
+}
+/* 学历提升标题 */
+.eduTitle{
+  font-size: 20px;
+}
+/* 分割线cutting_line */
+.cutting_line{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+}
+.count-text-num{
+  color: red;
+}
+/* 分割线-横线 */
+.split-count{
+  color: white;
+}
+
+/* 测评表单 */
+.formDiv{
+  margin: 0 auto;
+  align-items: center;
+}
+.form-input{
+  margin: 0 auto;
+}
+.input-style{
+  width: 85%;
+  height: 30px;
+  border: 1px solid #555;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-left: 25px
+}
+.form-tital{
+  margin-left: 25px;
+  color: grey;
+  font-size: 15px;
+}
+.form-tital a{
+  color: red;
+}
+/* input-下拉框样式 */
+.input_picker{
+  width: 85%;
+  height: 30px;
+  border: 1px solid #555;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-left: 25px;
+  color: grey;
+}
+/* 测评按钮样式 */
+.span-text{
+  color: red;
+  font-size: 13px;
+  text-align: center;
+}
+.btn-cp{
+  margin: 0 auto;
+  width: 90%;
+}
+/* 底部图片样式 */
+.buttomImg{
+  display: flex;
+  justify-content: center;  
+  width: 100%;
+}
+
+/* 底部两个咨询按钮样式 */
+.consult{
+  display: flex;
+  flex-direction: row;
+}
+.consult-phone{
+  width: 50%;
+  height: 40px;
+ 
+ 
+}
+.consult-service{
+  width: 50%;
+  height: 40px;
+  
+  
+}

@@ -1,0 +1,275 @@
+<!--pages/evaluation.wxml-->
+<view class="totalDiv">
+
+<!-- =====swiper tab start==== -->
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">深圳入户积分在线测评</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">测评领取学历提升方案</view>  
+    
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <!-- 深圳积分入户在线测评 start -->  
+    <swiper-item>  
+      <view>
+      <!-- ==积分测评整个页面start=== -->
+      
+  <view style='height:10px'></view>
+<!-- 测评页面顶部图片 -->
+<view class='topImg'>
+  <image src='/imgs/index.png' style='width:100%;height=100%' mode="widthFix"> 
+  </image>
+</view>
+<view style='height:10px'></view>
+
+<!-- 积分入户在线测评 -->
+<view class='headline'>
+  <text >积分入户在线测评</text>
+</view>
+
+<view style='height:10px'></view>
+
+<view data-node="topCount" class="cutting_line">
+        <span class="split-count">————— </span>
+        <span data-node="countTextPre" class="count-text">目前已经有</span>
+        <span data-node="countTextNum" class="count-text-num"> 21783 </span>
+        <span data-node="countTextPos" class="count-text">人参与活动</span>
+        <span class="split-count"> —————</span>
+</view>
+<view style='height:20px'></view>
+<view class='formDiv'>
+  <form class='jf_form'>
+    <view class='form-input'>
+    <!-- 姓名start -->
+      <span class="form-tital">姓名<a>*</a></span>
+      <view style='height:5px'></view>
+      <input class='input-style' type='text' placeholder='请填写真实姓名' id='name'         
+            name='name' maxlength='5'></input>
+    <!-- 姓名end -->
+
+    <!-- 电话start -->
+      <view style='height:10px'></view>
+      <span class="form-tital">电话<a>*</a></span>
+      <view style='height:5px'></view>
+      <input class='input-style' type='text' placeholder='请填写真实电话' id='phone'         
+            name='phone' maxlength='11'></input>
+
+    <!-- 电话end -->
+    
+    <!-- 年龄start -->
+     <view style='height:10px'></view>
+     <span class="form-tital">年龄<a>*</a></span>
+      <picker name='age' class='picker' value="{{age_array[age_index].id}}" data-selectage="{{age_array[age_index].name}}" range='{{age_array}}' range-key="{{'name'}}" 
+      bindchange='bindPickerChange_age' >
+
+      <view class='input_picker'>
+       {{age_array[age_index].name}} <!-- 指定数组中指定下标的name键对应的值 -->
+      </view>
+
+      </picker>
+
+    <!-- 年龄end -->
+    
+    <!-- 社保start -->
+       <view style='height:10px'></view>
+     <span class="form-tital">社保<a>*</a></span>
+      <picker name='insureYear' class='picker' value="{{insureYear_array[insureYear_index].id}}" data-selectinsureYear="{{insureYear_array[insureYear_index].name}}" range='{{insureYear_array}}' range-key="{{'name'}}" 
+      bindchange='bindPickerChange_insureYear' >
+
+      <view class='input_picker'>
+       {{insureYear_array[age_index].name}} <!-- 指定数组中指定下标的name键对应的值 -->
+      </view>
+      
+      </picker>
+
+    <!-- 社保end -->
+
+    <!-- 学历start -->
+     <view style='height:10px'></view>
+     <span class="form-tital">学历<a>*</a></span>
+      <picker name='educationLevel' class='picker' value="{{educationLevel_array[educationLevel_index].id}}" data-selectage="{{educationLevel_array[educationLevel_index].name}}" range='{{educationLevel_array}}' range-key="{{'name'}}" 
+      bindchange='bindPickerChange_educationLevel' >
+
+      <view class='input_picker'>
+       {{educationLevel_array[educationLevel_index].name}} <!-- 指定数组中指定下标的name键对应的值 -->
+      </view>
+
+      </picker>
+
+    <!-- 学历end -->
+
+    </view>
+
+  </form>
+</view>
+
+<view style='height:20px'></view>
+<!-- 测评按钮 -->
+<view class='span-text'>请填写真实手机号码，以便工作人员与您取得联系</view>
+<view style='height:5px'></view>
+<view class="btn-cp" >
+    <button type='primary'>提交马上获取积分</button>
+</view>
+<view style='height:40px'></view>
+
+<view class="btn-cp" >
+    <button type='warn'>注册会员领取奖励金</button>
+</view>
+<view style='height:20px'></view>
+<view class="btn-cp" >
+    <button type='warn'>回到首页</button>
+</view>
+<view style='height:30px'></view>
+<!-- 底部补贴图片 -->
+<view class='buttomImg'>
+  <image src='/imgs/butie.jpg' style='width:90%;height=90%' mode="widthFix"> 
+  </image>
+</view>
+<!-- ==积分测评整个页面end===== -->
+
+  </view>
+    </swiper-item>  
+    <!-- 深圳积分入户在线测评 end -->  
+
+    <!-- 测评领取学历提升方案 start -->    
+    <swiper-item>  
+      <view>
+       <!-- ==学历测评整个页面start=== -->
+      
+  <view style='height:10px'></view>
+<!-- 测评页面顶部图片 -->
+<view class='topImg'>
+  <image src='/imgs/index.png' style='width:100%;height=100%' mode="widthFix"> 
+  </image>
+</view>
+<view style='height:10px'></view>
+
+<!-- 学历在线测评 -->
+<view class='headline'>
+  <text >在线测评</text>
+  <view style='height:0px'></view>
+  <text  class='eduTitle' >领取学历提升方案</text>
+</view>
+
+<view style='height:10px'></view>
+
+<view data-node="topCount" class="cutting_line">
+        <span class="split-count">————— </span>
+        <span data-node="countTextPre" class="count-text">目前已经有</span>
+        <span data-node="countTextNum" class="count-text-num"> 14221 </span>
+        <span data-node="countTextPos" class="count-text">人参与活动</span>
+        <span class="split-count"> —————</span>
+</view>
+<view style='height:20px'></view>
+<view class='formDiv'>
+  <form class='jf_form'>
+    <view class='form-input'>
+    <!-- 姓名start -->
+      <span class="form-tital">姓名<a>*</a></span>
+      <view style='height:5px'></view>
+      <input class='input-style' type='text' placeholder='请填写真实姓名' id='name'         
+            name='name' maxlength='5'></input>
+    <!-- 姓名end -->
+
+    <!-- 电话start -->
+      <view style='height:10px'></view>
+      <span class="form-tital">电话<a>*</a></span>
+      <view style='height:5px'></view>
+      <input class='input-style' type='text' placeholder='请填写真实电话' id='phone'         
+            name='phone' maxlength='11'></input>
+
+    <!-- 电话end -->
+    
+    <!-- 年龄start -->
+     <view style='height:10px'></view>
+     <span class="form-tital">年龄<a>*</a></span>
+      <picker name='age' class='picker' value="{{age_array[age_index].id}}" data-selectage="{{age_array[age_index].name}}" range='{{age_array}}' range-key="{{'name'}}" 
+      bindchange='bindPickerChange_age' >
+
+      <view class='input_picker'>
+       {{age_array[age_index].name}} <!-- 指定数组中指定下标的name键对应的值 -->
+      </view>
+
+      </picker>
+
+    <!-- 年龄end -->
+
+    <!-- 当前学历start -->
+     <view style='height:10px'></view>
+     <span class="form-tital">当前学历<a>*</a></span>
+      <picker name='educationLevel' class='picker' value="{{educationLevel_array[educationLevel_index].id}}" data-selectage="{{educationLevel_array[educationLevel_index].name}}" range='{{educationLevel_array}}' range-key="{{'name'}}" 
+      bindchange='bindPickerChange_educationLevel' >
+
+      <view class='input_picker'>
+       {{educationLevel_array[educationLevel_index].name}} <!-- 指定数组中指定下标的name键对应的值 -->
+      </view>
+
+      </picker>
+
+    <!-- 当前学历end -->
+
+    <!-- 报考学历start -->
+     <view style='height:10px'></view>
+     <span class="form-tital">报考学历<a>*</a></span>
+      <picker name='enterEducationLevel' class='picker' value="{{enterEducationLevel_array[enterEducationLevel_index].id}}" data-selectage="{{enterEducationLevel_array[enterEducationLevel_index].name}}" range='{enterEducationLevel_array}}' range-key="{{'name'}}" 
+      bindchange='bindPickerChange_enterEducationLevel' >
+
+      <view class='input_picker'>
+       {{enterEducationLevel_array[enterEducationLevel_index].name}} <!-- 指定数组中指定下标的name键对应的值 -->
+      </view>
+
+      </picker>
+
+    <!-- 报考学历end -->
+
+    </view>
+
+  </form>
+</view>
+
+<view style='height:20px'></view>
+<!-- 测评按钮 -->
+<view class='span-text'>请填写真实手机号码，以便工作人员与您取得联系</view>
+<view style='height:5px'></view>
+<view class="btn-cp" >
+    <button type='primary'>提交领取学历提升方案</button>
+</view>
+<view style='height:40px'></view>
+
+<view class="btn-cp" >
+    <button type='warn'>注册会员领取奖励金</button>
+</view>
+<view style='height:20px'></view>
+<view class="btn-cp" >
+    <button type='warn'>回到首页</button>
+</view>
+<view style='height:20px'></view>
+<!-- 底部补贴图片 -->
+<view class='buttomImg'>
+  <image src='/imgs/butie.jpg' style='width:90%;height=90%' mode="widthFix"> 
+  </image>
+</view>
+<!-- ==学历测评整个页面end===== -->
+
+      
+      </view>  
+    </swiper-item>  
+    <!-- 测评领取学历提升方案 end -->    
+</swiper>  
+
+<!-- =====swiper tab end==== -->
+
+<!-- ==底部电话客服 start== -->
+<view class='consult'>
+  <button type='primary' bindtap='calling'  class='consult-phone'>
+  拨打电话
+  </button>
+
+  <button type='primary' open-type='contact' class='consult-service'>
+  在线客服
+  </button>
+
+</view>
+<!-- ==底部电话客服 end== -->
+</view>
+

@@ -1,0 +1,42 @@
+/* pages/member/member.wxss */
+.login_title{
+  height: 50px;
+  background-color: #009ADA;
+  color: white;
+  text-align: center;
+}
+.login_boder{
+  margin: 0 auto;
+}
+/* 输入框 */
+.input-style{
+  border: 1px solid #009ADA;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 15px;
+  font-size: 15px;
+  height: 40px;
+}
+/* 登录按钮 */
+.login_button{
+  background-color:  #009ADA;
+  color:  white;
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 15px;
+  line-height: 75rpx;
+
+  
+}
+.login_button2{
+  background-color:  #CCCCCC;
+  color:  white;
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 15px;
+  line-height: 75rpx;
+
+  
+}
